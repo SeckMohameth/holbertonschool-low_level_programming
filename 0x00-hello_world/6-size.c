@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- *main - print size of data types
- *Description: It will print size of data types on computer
- *Return: returns 0
+ * main - print size of data types
+ * ≈ßDescription: It will print size of data types on computer
+ * Return: returns 0
  **/
 int main(void)
 {
