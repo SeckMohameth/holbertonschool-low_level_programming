@@ -1,10 +1,11 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include <time.h>
+#include <stdio.h>
 /**
- *main - if statements
- *Return: returns 0
- **/
+ * main - if statements
+ *
+ * Return: returns 0
+ */
 int main(void)
 {
 	int n;
@@ -15,11 +16,11 @@ int main(void)
 	{
 		printf("%d is positve\n", n);
 	}
-	if (n == 0)
+	else if (n == 0)
 	{
 		printf("%d is zero\n", n);
 	}
-	if (n < 0)
+	else if (n < 0)
 	{
 		printf("%d is negative\n", n);
 	}
