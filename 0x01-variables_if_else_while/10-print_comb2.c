@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * main - print 00 to 99
- * Return - returns 0
- **/
+* main - print 00 to 99
+* Return: returns 0 for this
+**/
 int main(void)
 {
 	int x;
@@ -15,7 +15,6 @@ int main(void)
 		{
 			putchar(x);
 			putchar(z);
-
 			if (x < '9' || z < '9')
 			{
 				putchar(',');
