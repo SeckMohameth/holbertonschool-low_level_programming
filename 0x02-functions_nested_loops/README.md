@@ -1,0 +1,1 @@
+In this project we will begin going over functions in C. This project will also go over nested while loops, header files, and function prototypes.
