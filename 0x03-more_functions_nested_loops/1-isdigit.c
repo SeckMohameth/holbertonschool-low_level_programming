@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
 * _isdigit - check for a digit
-*@c: int for digit
+* @c: int for digit
 * Return: returns 0 and 1
 **/
 int _isdigit(int c)
