@@ -1,9 +1,11 @@
 #include "holberton.h"
 /**
-*
-*
+* swap_int - swap integers
+*@a: int pointer vaiables
+*@b: int pointer
+*Return: returns pointers a and b
 **/
-void swap_int(int *a, int *b) 
+void swap_int(int *a, int *b)
 {
 	int temp;
 
