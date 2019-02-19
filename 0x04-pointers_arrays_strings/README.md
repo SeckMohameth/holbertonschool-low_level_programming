@@ -1,0 +1,1 @@
+For this project we are going over arrays, pointers and pointers.
