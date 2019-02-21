@@ -11,7 +11,7 @@ void puts2(char *str)
 	while (*str++)
 		;
 
-	while (mo < str)
+	while (mo < str - 1)
 	{
 		_putchar(*mo);
 		mo += 2;
