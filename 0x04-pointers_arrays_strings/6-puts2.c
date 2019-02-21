@@ -6,15 +6,15 @@
 **/
 void puts2(char *str)
 {
-	char *giggles = str;
+	char *mo = str;
 
 	while (*str++)
 		;
 
-	while (giggles < str)
+	while (mo < str)
 	{
-		_putchar(*giggles);
-		giggles += 2;
+		_putchar(*mo);
+		mo += 2;
 	}
 	_putchar('\n');
 }
