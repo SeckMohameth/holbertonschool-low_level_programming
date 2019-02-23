@@ -4,25 +4,31 @@
 * @dest: pointer one
 * @src: pointer two
 * @n: count bytes
+*
 * Return: returns 0
 **/
 char *_strncat(char *dest, char *src, int n)
 {
-	int len; 
-	int len2;
-	n = 0;
+	int c;
 
-	for (len = 0; dest[len] != '\0'; len++)
-		;
-	for (len2 = 0; src[len2] != '\0'; len2++)
+	char *dest1 = dest;
+
+	c = 0;
+
+	while (*dest1 != '\0')
 	{
-		if (*src >= n)
-		{
-			dest[len] = src[len2];
-			len++;
-		}
+		dest1++;
 	}
 
-	dest[len] = '\0';
-	return (0);
+	while (*src != '\0' && c < n)
+	{
+		*dest1 = *src;
+
+		dest1++;
+		src++;
+		c++;
+	}
+
+	return (dest);
+
 }
