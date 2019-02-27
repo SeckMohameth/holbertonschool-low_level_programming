@@ -6,29 +6,12 @@
 **/
 void _puts_recursion(char *s)
 {
-	int i;
-	char *p = s;
+	int i = 0;
 
-	if (*p == s)
-	{
-		_putchar(p[i]);
-		i++;
-	}
+	if (*s == '\0')
+		return;
 
+	_putchar(s[i]);
+	_puts_recursion(s + 1);
 	_putchar('\n');
 }
-
-
-
-
-/**
-   No Loops. If we were using loops this
-   is how you would do it.
-
- for (i = 0; p[i] != 0; i++)
-        {
-                _putchar(p[i]);
-        }
-
-        _putchar('\n');
-**/
