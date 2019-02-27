@@ -1,0 +1,1 @@
+Today's project goes over recursion. Functions will be calling themselves.
