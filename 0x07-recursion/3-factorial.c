@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
-*
-*
-*
+* factorial - return factorial number
+*@n: number being passed
+*Return: returns factorial
 **/
 int factorial(int n)
 {
@@ -13,5 +13,5 @@ int factorial(int n)
 	{
 		return (-1);
 	}
-	return (n * factorial (n - 1));
+	return (n * factorial(n - 1));
 }
