@@ -1,0 +1,1 @@
+Today's project goes over structures and typedef in C
