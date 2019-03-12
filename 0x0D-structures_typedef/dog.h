@@ -14,4 +14,6 @@ struct dog
 	char *owner;
 };
 
+typedef dog dog_t;
+
 #endif /* _DOG_H_ */
