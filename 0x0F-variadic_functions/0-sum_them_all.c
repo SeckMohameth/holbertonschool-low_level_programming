@@ -3,16 +3,16 @@
 #include <stdarg.h>
 
 /**
-*
-*
-*
+* sum_them_all - return the sum
+* @n: integeter for arguments
+* Return: returns sum of arguments
 **/
 
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list arguments;
-        unsigned int i;
-        unsigned int j = 0;
+	unsigned int i;
+	unsigned int j = 0;
 
 	if (n == 0)
 		return (0);
@@ -24,7 +24,7 @@ int sum_them_all(const unsigned int n, ...)
 		j += va_arg(arguments, int);
 	}
 
-	va_end (arguments);
+	va_end(arguments);
 
 	return (j);
 
