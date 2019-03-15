@@ -1,0 +1,1 @@
+Variadic functions - functions which take a variable number of arguments
