@@ -10,7 +10,7 @@
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
-	int j;
+	char *j;
 
 	va_list lengthOfArguments;
 
@@ -22,16 +22,22 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	for (i = 0; i < n; i++)
 	{
-		j = va_arg(lengthOfArguments, int);
+		j = va_arg(lengthOfArguments, char *);
 
-		printf("%d", j);
+
+		if (j == NULL)
+			printf("(nil)");
+
+
+		printf("%s", j);
 
 		if (i < n - 1)
 		{
 			printf("%s", separator);
 		}
 
-		printf("%d", j);
+
+
 	}
 	va_end(lengthOfArguments);
 	       printf("\n");
