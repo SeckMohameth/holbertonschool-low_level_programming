@@ -14,9 +14,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	va_list lengthOfArguments;
 
-	if (separator == NULL)
-		return;
-
 
 	va_start(lengthOfArguments, n);
 
@@ -26,18 +23,17 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 
 		if (j == NULL)
+		{
 			printf("(nil)");
-
-
+		}
+		else
+		{
 		printf("%s", j);
-
-		if (i < n - 1)
+		}
+		if (separator != NULL && i != n - 1)
 		{
 			printf("%s", separator);
 		}
-
-
-
 	}
 	va_end(lengthOfArguments);
 	       printf("\n");
