@@ -1,0 +1,1 @@
+Stingly and linked list
