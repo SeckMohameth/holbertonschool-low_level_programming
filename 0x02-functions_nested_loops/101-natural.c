@@ -1,7 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include "holberton.h"
 
-int main (void)
+int main(void)
 {
 
 	int sum = 0;
@@ -9,7 +10,7 @@ int main (void)
 
 	for (n = 0; n < 1024; n++)
 	{
-		(n%5 == 0 || n % 3 == 0);
+		(n % 5 == 0 || n % 3 == 0);
 			sum += n;
 	}
 
