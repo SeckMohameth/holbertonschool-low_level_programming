@@ -34,6 +34,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	mo = read(fd, zard, letters);
 
+	if (mo == -1)
+		return (0);
+
 
 	close(fd);
 
@@ -47,6 +50,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	belle = write(STDOUT_FILENO, zard, mo);
 	if (belle == -1)
 		return (0);
+
 
 
 	if (mo != belle)
