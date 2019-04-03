@@ -38,24 +38,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 
-	close(fd);
-
-
-
-	fd = open(filename, O_WRONLY);
-	if (fd == -1)
-		return (0);
-
-
 	belle = write(STDOUT_FILENO, zard, mo);
-	if (belle == -1)
+	if (mo != belle && belle < mo)
 		return (0);
-
-
-
-	if (mo != belle)
-		return (0);
-
 
 	close(fd);
 
