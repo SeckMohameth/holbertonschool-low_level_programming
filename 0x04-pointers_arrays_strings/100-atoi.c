@@ -21,7 +21,7 @@ int _atoi(char *s)
 
 	for (; *sub >= '0' && *sub <= '9'; sub++)
 	{
-		ret * = 10;
+		ret = 10;
 
 		if (sign == -1)
 			ret -= *sub - '0';
