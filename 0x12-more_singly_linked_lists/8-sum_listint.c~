@@ -1,0 +1,28 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include "lists.h"
+
+/**
+* 
+*
+*
+*
+**/
+
+int sum_listint(listint_t *head)
+{
+	int data = 0;
+	listint_t *ptr;
+
+
+	while (head != NULL)
+	{
+		ptr = head;
+		/*data = ptr->n; */
+		head = ptr->next;
+		data += ptr->n;
+
+	}
+
+	return (data);
+}

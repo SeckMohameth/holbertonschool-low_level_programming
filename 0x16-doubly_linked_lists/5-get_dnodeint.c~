@@ -1,0 +1,34 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include "lists.h"
+
+/**
+ * get_dnodeint_at_index - return nth node
+ * @head: double pointer
+ * @index - index of node
+ * Return: returns address of new node
+ **/
+
+dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
+{
+	unsigned int counter = 0;
+
+	dlistint_t *ptr;
+
+	if (head == NULL)
+		return (NULL);
+
+	while (counter <= index && head != NULL)
+	{
+		ptr = head;
+		head = ptr->next;
+		counter++;
+
+	}
+
+	if (counter < index)
+		return (NULL);
+
+	return (ptr);
+
+}

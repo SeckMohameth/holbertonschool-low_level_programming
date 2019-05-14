@@ -1,0 +1,17 @@
+#include "holberton.h"
+
+/**
+* add - add two ints
+* @int: first int
+* @int: second int
+* Return: return sume
+**/
+int add(int, int);
+int add(int i, int j)
+{
+	int sum = 0;
+	sum = i + j;
+
+	return (sum);
+
+}

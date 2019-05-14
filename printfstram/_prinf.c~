@@ -1,0 +1,7 @@
+#include st
+
+
+int _print(const char *str, ...)
+{
+	str = NULL;
+}
