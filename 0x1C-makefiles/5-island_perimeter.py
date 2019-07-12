@@ -30,7 +30,7 @@ def island_perimeter(grid):
                     numRight = grid[row][column + 1]
 
                 if bottom >= len(grid):
-                    numbottom = 0
+                    numBottom = 0
                 else:
                     numBottom = grid[row + 1][column]
 
