@@ -1,31 +1,31 @@
 #include "binary_trees.h"
 
-
 /**
+ * binary_tree_height - find the height of a tree
+ * @tree: tree to find the height of
  *
- *
- *
- **/
-
-int isBalanced(const binary_tree_t *tree)
+ * Return: Height from end point
+ */
+size_t binary_tree_height(const binary_tree_t *tree)
 {
-	int left, right;
+	int maxl;
+	int maxr;
 
+	/*Error checking if they pass us a NULL tree*/
 	if (tree == NULL)
-		return (-1);
+		return (0);
 
-	left = isBalanced(tree->left) + 1;
-	right = isBalanced(tree->right) + 1;
+	/*Actual base case to check against*/
+	if (tree->right == NULL && tree->left == NULL)
+		return (0);
 
-	if (left > right)
-		return (left);
+	maxl = binary_tree_height(tree->left);
+	maxr = binary_tree_height(tree->right);
+	if (maxl > maxr)
+		return (maxl + 1);
 	else
-		return (right);
-
+		return (maxr + 1);
 }
-
-
-
 /**
  * binary_tree_balance - measures balance factor of a binary tree
  * @tree: tree to get the balance of
@@ -34,17 +34,16 @@ int isBalanced(const binary_tree_t *tree)
  */
 int binary_tree_balance(const binary_tree_t *tree)
 {
+	int l_height = 0;
+	int r_height = 0;
 
-	int left, right;
-
-
-	if (tree == NULL)
-		return (0);
-
-
-	left = isBalanced(tree->left);
-	right = isBalanced(tree->right);
-
-	return (left - right);
-
+	if (tree->left == NULL)
+		l_height = -1;
+	else
+		l_height = binary_tree_height(tree->left);
+	if (tree->right == NULL)
+		r_height = -1;
+	else
+		r_height = binary_tree_height(tree->right);
+	return (l_height - r_height);
 }
